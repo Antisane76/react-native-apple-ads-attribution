@@ -166,7 +166,7 @@ RCT_EXPORT_METHOD(getAttributionData:
                   rejecter:
                   (RCTPromiseRejectBlock) reject) {
     
-    [AppleAdsAttribution getAdServicesAttributionDataWithCompletionHandler:^(NSDictionary * _Nullable attributionData, NSError * _Nullable adServicesError) {
+    [AppleAdsAttribution getAdServicesAttributionDataWithCompletionHandler:^(NSDictionary * _Nullable attributionData, NSError * _Nullable error) {
         if (attributionData != nil) {
             resolve(attributionData);
         } else {
